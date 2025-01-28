@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ContactosController;
+use App\Http\Controllers\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +14,5 @@ use App\Http\Controllers\ContactosController;
 |
 */
 
-Route::post('/registro', [ContactosController::class, "registro"])->middleware('api');
-Route::post('/login', [ContactosController::class, "login"])->middleware('api');
+Route::post('/registro', [UsersController::class, "registro"])->middleware('api');
+Route::post('/login', [UsersController::class, "login"])->middleware('api');

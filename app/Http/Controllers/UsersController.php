@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
-class ContactosController extends Controller
+class UsersController extends Controller
 {
     public function registro(Request $request) {
         $validatedData = $request->validate([
