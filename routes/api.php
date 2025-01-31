@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\ContactosController;
+use GuzzleHttp\Promise\Create;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,5 @@ use App\Http\Controllers\UsersController;
 
 Route::post('/registro', [UsersController::class, "registro"])->middleware('api');
 Route::post('/login', [UsersController::class, "login"])->middleware('api');
+Route::post('/contactos/crear', [ContactosController::class, 'create'])->middleware('api');
+Route::get('/contactos', [ContactosController::class, 'getAll'])->middleware('api');
