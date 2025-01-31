@@ -52,8 +52,7 @@ class ContactosController extends Controller
     }
 
     public function getAll(){
-        $contacto = new Contacto();
-        $contacto->all();
+        $contacto = Contacto::all();
         return response()->json([
             'status'=> 'creado',
             'data'=> $contacto
